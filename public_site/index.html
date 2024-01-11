@@ -23,6 +23,7 @@
     <script src="index.js" defer></script>
 </head>
 <!-- class="no-scroll" onload="loadAnimations()" -->
+<!-- POST DEV ADD onload="loadAnimations()" class="no-scroll" to Body-->
 
 <body>
     <header>
@@ -67,7 +68,7 @@
             <h2 id="hello-intro">Hello!</h2>
             <h2 id="name-intro">I am <span id="name-span">Joseph Calise</span></h2>
         </div>
-        <p id="description-intro">I am a self-taught developer currently pursing a Bachelors of Science in Computer
+        <p id="description-intro">I am a United States Coast Guard veteran pursing a Bachelors of Science in Computer
             Science with a Minor
             in Analytics at Chapman
             University.</p>
@@ -102,7 +103,7 @@
                         have made strides to
                         accomplishing my goals and becoming a Software Engineer. In this time, I have taught myself
                         HTML, CSS and
-                        JavaScript, as well as, being on track to graduate in 2023 with a BS in Computer Science from
+                        JavaScript, as well as, being on track to graduate in 2024 with a BS in Computer Science from
                         Chapman University in
                         Orange, CA. I look forward to continuing to pursue my passion in this field and hope to grow
                         into a seasoned
@@ -125,11 +126,13 @@
             <h2 class="title-text">Projects</h2>
             <div class="label-holder">
                 <ul class="label-div">
+                    <!-- ADDING A PROJECT, CHANGE THIS SECTION AND THE JAVASCRIPT TO POPULATE IMAGES JS ref Line 97-->
                     <!-- maybe put icons with background highlighting -->
                     <li id="cpp">C++</li>
                     <li id="javascript">JavaScript</li>
                     <li id="python">Python</li>
                     <li id="java">Java</li>
+                    <li id="sql">SQL</li>
                     <li id="terminal">Terminal</li>
                     <li id="academic">Academic</li>
                 </ul>
@@ -330,6 +333,150 @@
                     </div>
                 </div>
                 <!-- Project Item (Graph) END-->
+                <!-- Project Item (Wordle2) start-->
+                <div class="project-item javascript project-showing">
+                    <h3><a href="/wotd">Wordle</a></h3>
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides wordleProj2 fade">
+                            <img src="./assets/wordle1.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides wordleProj2 fade">
+                            <img src="./assets/wordle2.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides wordleProj2 fade">
+                            <img src="./assets/wordle3.jpg" style="width:100%">
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="wordle.plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="wordle.plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+
+                    <!-- The dots/circles -->
+                    <span class="dot wordleDot2" onclick="wordle.currentSlide(1)"></span>
+                    <span class="dot wordleDot2" onclick="wordle.currentSlide(2)"></span>
+                    <span class="dot wordleDot2" onclick="wordle.currentSlide(3)"></span>
+                    <div class="project-text">
+                        <p>Wordle is a popular online game where you have 6 guesses to guess all the letters of a 5
+                            letter word. One thing I implimented in my clone is a leaderboard and ranking system. The
+                            game is live and playable <a href="/wotd">HERE.</a>
+                        </p>
+                        <div class="repo-container">
+                            <a href="https://github.com/josephcalise/wordle-clone-leaderboard" target="_blank">Wordle
+                                GitHub
+                                Repo</a>
+                        </div>
+                    </div>
+                    <div class="filter-tags">
+                        <ul class="filter-tags">
+                            <li>WebApp</li>
+                            <li>Personal</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Project Item (Wordle2) END-->
+                <!-- Project Item (Wordle3) start-->
+                <div class="project-item javascript project-showing">
+                    <h3><a href="/wotd">Wordle</a></h3>
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides wordleProj3 fade">
+                            <img src="./assets/wordle1.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides wordleProj3 fade">
+                            <img src="./assets/wordle2.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides wordleProj3 fade">
+                            <img src="./assets/wordle3.jpg" style="width:100%">
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="wordle.plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="wordle.plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+
+                    <!-- The dots/circles -->
+                    <span class="dot wordleDot3" onclick="wordle.currentSlide(1)"></span>
+                    <span class="dot wordleDot3" onclick="wordle.currentSlide(2)"></span>
+                    <span class="dot wordleDot3" onclick="wordle.currentSlide(3)"></span>
+                    <div class="project-text">
+                        <p>Wordle is a popular online game where you have 6 guesses to guess all the letters of a 5
+                            letter word. One thing I implimented in my clone is a leaderboard and ranking system. The
+                            game is live and playable <a href="/wotd">HERE.</a>
+                        </p>
+                        <div class="repo-container">
+                            <a href="https://github.com/josephcalise/wordle-clone-leaderboard" target="_blank">Wordle
+                                GitHub
+                                Repo</a>
+                        </div>
+                    </div>
+                    <div class="filter-tags">
+                        <ul class="filter-tags">
+                            <li>WebApp</li>
+                            <li>Personal</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Project Item (Wordle3) END-->
+                <!-- Project Item (Wordle4) start-->
+                <div class="project-item javascript project-showing">
+                    <h3><a href="/wotd">Wordle</a></h3>
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides wordleProj4 fade">
+                            <img src="./assets/wordle1.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides wordleProj4 fade">
+                            <img src="./assets/wordle2.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides wordleProj4 fade">
+                            <img src="./assets/wordle3.jpg" style="width:100%">
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="wordle.plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="wordle.plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+
+                    <!-- The dots/circles -->
+                    <span class="dot wordleDot4" onclick="wordle.currentSlide(1)"></span>
+                    <span class="dot wordleDot4" onclick="wordle.currentSlide(2)"></span>
+                    <span class="dot wordleDot4" onclick="wordle.currentSlide(3)"></span>
+                    <div class="project-text">
+                        <p>Wordle is a popular online game where you have 6 guesses to guess all the letters of a 5
+                            letter word. One thing I implimented in my clone is a leaderboard and ranking system. The
+                            game is live and playable <a href="/wotd">HERE.</a>
+                        </p>
+                        <div class="repo-container">
+                            <a href="https://github.com/josephcalise/wordle-clone-leaderboard" target="_blank">Wordle
+                                GitHub
+                                Repo</a>
+                        </div>
+                    </div>
+                    <div class="filter-tags">
+                        <ul class="filter-tags">
+                            <li>WebApp</li>
+                            <li>Personal</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Project Item (Wordle4) END-->
 
             </div>
         </div>

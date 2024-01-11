@@ -93,11 +93,26 @@ graph.showSlides(graph.slideIndex);
 const mario = new ProjectSlider("marioProj", "marioDot")
 mario.showSlides(mario.slideIndex);
 
+
+/********** To Poplate further projects */
+const wordle2 = new ProjectSlider("wordleProj2", "wordleDot2")
+wordle2.showSlides(wordle2.slideIndex);
+const wordle3 = new ProjectSlider("wordleProj3", "wordleDot3")
+wordle3.showSlides(wordle3.slideIndex);
+const wordle4 = new ProjectSlider("wordleProj4", "wordleDot4")
+wordle4.showSlides(wordle4.slideIndex);
+
 /******************************************
  * Project Filtering
  *****************************************/
 
 let currentlyFiltered;
+const cppFilter = document.getElementById("cpp")
+const javascriptFilter = document.getElementById("javascript")
+const pythonFilter = document.getElementById("python")
+const javaFilter = document.getElementById("java")
+const terminalFilter = document.getElementById("terminal")
+const academicFilter = document.getElementById("academic")
 
 /**************************************
  * Clear Filter Function
@@ -109,13 +124,18 @@ function clearFilter() {
       project.classList.replace("project-hidden", "project-showing")
     }
   }
+  cppFilter.classList.remove("glowing")
+  javascriptFilter.classList.remove("glowing")
+  pythonFilter.classList.remove("glowing")
+  javaFilter.classList.remove("glowing")
+  terminalFilter.classList.remove("glowing")
+  academicFilter.classList.remove("glowing")
 }
 
 /******************************************
  * C++ Filter
  *****************************************/
 
-const cppFilter = document.getElementById("cpp")
 cppFilter.addEventListener("click", () => {
   if (currentlyFiltered != 'cpp') {
     currentlyFiltered = 'cpp'
@@ -130,7 +150,14 @@ cppFilter.addEventListener("click", () => {
         project.classList.replace("project-showing", "project-hidden")
       }
     }
+    cppFilter.classList.add("glowing")
+    javascriptFilter.classList.remove("glowing")
+    pythonFilter.classList.remove("glowing")
+    javaFilter.classList.remove("glowing")
+    terminalFilter.classList.remove("glowing")
+    academicFilter.classList.remove("glowing")
   } else {
+    currentlyFiltered = null
     clearFilter()
   }
 })
@@ -139,7 +166,7 @@ cppFilter.addEventListener("click", () => {
  * JS Filter
  *****************************************/
 
-const javascriptFilter = document.getElementById("javascript")
+
 javascriptFilter.addEventListener("click", () => {
   if (currentlyFiltered != 'javascript') {
     currentlyFiltered = 'javascript'
@@ -154,6 +181,12 @@ javascriptFilter.addEventListener("click", () => {
         project.classList.replace("project-showing", "project-hidden")
       }
     }
+    cppFilter.classList.remove("glowing")
+    javascriptFilter.classList.add("glowing")
+    pythonFilter.classList.remove("glowing")
+    javaFilter.classList.remove("glowing")
+    terminalFilter.classList.remove("glowing")
+    academicFilter.classList.remove("glowing")
   } else {
     clearFilter()
   }
@@ -163,7 +196,7 @@ javascriptFilter.addEventListener("click", () => {
  * Python Filter
  *****************************************/
 
-const pythonFilter = document.getElementById("python")
+
 pythonFilter.addEventListener("click", () => {
   if (currentlyFiltered != 'python') {
     currentlyFiltered = 'python'
@@ -178,7 +211,14 @@ pythonFilter.addEventListener("click", () => {
         project.classList.replace("project-showing", "project-hidden")
       }
     }
+    cppFilter.classList.remove("glowing")
+    javascriptFilter.classList.remove("glowing")
+    pythonFilter.classList.add("glowing")
+    javaFilter.classList.remove("glowing")
+    terminalFilter.classList.remove("glowing")
+    academicFilter.classList.remove("glowing")
   } else {
+    currentlyFiltered = null
     clearFilter()
   }
 })
@@ -187,7 +227,7 @@ pythonFilter.addEventListener("click", () => {
  * Java Filter
  *****************************************/
 
-const javaFilter = document.getElementById("java")
+
 javaFilter.addEventListener("click", () => {
   if (currentlyFiltered != 'java') {
     currentlyFiltered = 'java'
@@ -202,7 +242,14 @@ javaFilter.addEventListener("click", () => {
         project.classList.replace("project-showing", "project-hidden")
       }
     }
+    cppFilter.classList.remove("glowing")
+    javascriptFilter.classList.remove("glowing")
+    pythonFilter.classList.remove("glowing")
+    javaFilter.classList.add("glowing")
+    terminalFilter.classList.remove("glowing")
+    academicFilter.classList.remove("glowing")
   } else {
+    currentlyFiltered = null
     clearFilter()
   }
 })
@@ -211,7 +258,7 @@ javaFilter.addEventListener("click", () => {
  * Terminal Filter
  *****************************************/
 
-const terminalFilter = document.getElementById("terminal")
+
 terminalFilter.addEventListener("click", () => {
   if (currentlyFiltered != 'terminal') {
     currentlyFiltered = 'terminal'
@@ -226,7 +273,14 @@ terminalFilter.addEventListener("click", () => {
         project.classList.replace("project-showing", "project-hidden")
       }
     }
+    cppFilter.classList.remove("glowing")
+    javascriptFilter.classList.remove("glowing")
+    pythonFilter.classList.remove("glowing")
+    javaFilter.classList.remove("glowing")
+    terminalFilter.classList.add("glowing")
+    academicFilter.classList.remove("glowing")
   } else {
+    currentlyFiltered = null
     clearFilter()
   }
 })
@@ -235,7 +289,6 @@ terminalFilter.addEventListener("click", () => {
  * Academic Filter
  *****************************************/
 
-const academicFilter = document.getElementById("academic")
 academicFilter.addEventListener("click", () => {
   if (currentlyFiltered != 'academic') {
     currentlyFiltered = 'academic'
@@ -250,7 +303,14 @@ academicFilter.addEventListener("click", () => {
         project.classList.replace("project-showing", "project-hidden")
       }
     }
+    cppFilter.classList.remove("glowing")
+    javascriptFilter.classList.remove("glowing")
+    pythonFilter.classList.remove("glowing")
+    javaFilter.classList.remove("glowing")
+    terminalFilter.classList.remove("glowing")
+    academicFilter.classList.add("glowing")
   } else {
+    currentlyFiltered = null
     clearFilter()
   }
 })
