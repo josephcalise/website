@@ -1,0 +1,72 @@
+[ ] Mobile Leaderboard set up sizing
+[ ] Played for today countdown (cookie)
+[ x] Leaderboard data implimentation
+[X] Leaderboard user stats data
+[ ] daily reset node-cron
+[ x ] word selection on the server
+[ x] swap get leaderboard for somewhere else after group validation
+[ ]
+[ ]
+[x ]access code at the end logic
+[ ] 
+[ x]set wordoftheday to last index of used words
+[ ]
+[ ]
+[x ]line 191 index.js
+[ ]
+[ x] access code input screen
+[ x] yes/no event listeners
+[ x] Split Server diff access codes
+[x ] different groups of players per access code
+[ ]
+[ ] code refactoring
+[ ] routes
+[ ] 
+[ ] reset streaks for missed days (query all completedToday false before resetting at midnight reset their streaks)
+[ ]
+[ ]
+[ ]
+[ ]
+[ ]
+[ ]
+[ ]
+[ ]Ipad pro query?
+[ ]
+[ ]
+[ ]
+[ ]
+[ ]
+
+
+
+
+Blog Idea:
+deisgn, keyboard layout
+back end, storage, schema, model
+accescodes 
+validating in the correct order for letter guessed
+
+
+
+
+
+
+        <div id="access-code-container" class="">
+            <div id="access-code-buttons-container" class="access-code-headers">
+                <h3 id="access-h3">Do you have an access code?</h3>
+                <div id="access-buttons">
+                    <button id="has-access-code" class="access-code-buttons">Yes</button>
+                    <button id="no-access-code" class="access-code-buttons">No</button>
+                </div>
+            </div>
+            <div id="access-code-input-container" class="hidden">
+                <label id="access-code-label" for="access-code-input">Please enter your access code:</label>
+                <input type="text" id="access-code-input" autocomplete="off">
+                <button type="submit" id="submit-access-code" class="access-button">Submit</button>
+            </div>
+            <div id="name-input-or-failed" class="hidden">
+                <label for="access-code-input">Please enter your name:</label>
+                <input type="text" id="submit-name-input">
+                <button type="submit" id="submit-name" class="access-button">Submit</button>
+            </div>
+        </div>

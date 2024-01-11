@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Calise | Developer</title>
+    <link rel="icon" type="image/x-icon" href="./assets/JCicon.png">
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        if (screen && screen.width > 480) {
+            document.write("<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'><\/script>");
+            document.write("<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />");
+        }
+    </script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="index.js" defer></script>
+</head>
+<!-- class="no-scroll" onload="loadAnimations()" -->
+
+<body>
+    <header>
+        <nav id="nav-bar">
+            <div class="logo">
+                <h1 class="logo-text"><a onClick="window.location.reload();"><img src="./assets/JCicon.png"></a></h1>
+            </div>
+            <img id="hamburger" src="./assets/hamburger-menu.png" />
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <div class="verticalLine"></div>
+                <li><a href="#about-me">About Me</a></li>
+                <div class="verticalLine"></div>
+                <li><a href="#projects">Projects</a></li>
+                <div class="verticalLine"></div>
+                <li><a href="#work-experience">Work Experience</a></li>
+                <div class="verticalLine"></div>
+                <li><a href="#contact">Contact</a></li>
+                <div class="verticalLine"></div>
+                <li><a href="./assets/Joseph_Calise_Resume.pdf" download="Joseph_Calise_Resume">Resume</a></li>
+            </ul>
+            <!-- Mobile Nav -->
+    </header>
+    <div id="mobile-nav" class="mobile-hidden">
+        <ul class="mobile-links">
+            <li class="nav-li"><a class="mobile-link" href="#">Home</a></li>
+            <li class="nav-li"><a class="mobile-link" href="#about-me">About Me</a></li>
+            <li class="nav-li"><a class="mobile-link" href="#projects">Projects</a></li>
+            <li class="nav-li"><a class="mobile-link" href="#work-experience">Work Experience</a></li>
+            <li class="nav-li"><a class="mobile-link" href="#contact">Contact</a></li>
+            <li><a href="/wotd">WordoftheDay!</a></li>
+            <li class="nav-li"><a class="mobile-link" href="./assets/Joseph_Calise_Resume.pdf"
+                    download="Joseph_Calise_Resume">Resume</a></li>
+        </ul>
+        <div id="mobile-dark-mode-button">
+            <img id="mobile-dark-mode-icon" class="sun" src="./assets/sun-warm.png" />
+        </div>
+    </div>
+    </nav>
+    <section class="intro-section">
+        <div id="hello-div">
+            <h2 id="hello-intro">Hello!</h2>
+            <h2 id="name-intro">I am <span id="name-span">Joseph Calise</span></h2>
+        </div>
+        <p id="description-intro">I am a self-taught developer currently pursing a Bachelors of Science in Computer
+            Science with a Minor
+            in Analytics at Chapman
+            University.</p>
+        <p id="quote-intro">"Programming isn't about what you know; it's about what you can figure out." <sub>-Chris
+                Pine (Not the actor)</sub></p>
+    </section>
+    <main id="main-page">
+        <div class="about-me" id="about-me">
+            <h2 class="title-text">About Me</h2>
+            <div class="about-me-container">
+                <img id="about-me-picture" src="./assets/cg-picture.jpeg" alt="A photo of myself">
+                <div id="about-me-text">
+                    <p class="about-me-text-1">My name is Joseph Calise and I am an aspiring Software Engineer. For the
+                        most part I am
+                        self-taught developer driven by curiosity and amazement of what can be accomplished by someone
+                        with an idea, a
+                        computer and the skill to code. In my personal life, I enjoy being outdoors, watching T.V and
+                        spending time with my
+                        wife and friends. I served in the United States Coast Guard from 2016 to 2020 and ended my
+                        enlistment as a
+                        Boatswain’s Mate Second Class.</p>
+
+                    <p class="about-me-text-2">Generally, Boatswain’s Mates will go on to be boat captains, cops or
+                        merchant mariners. But
+                        at the end of my enlistment, I knew none of those were for me. I knew I wanted to be in
+                        technology, but I didn’t
+                        know in what capacity. My start in technology was in IT with GreenCoast Hydroponics. While
+                        working there I was able
+                        to obtain my CompTIA Network+ and CompTIA Security+ within less than a year of each other. From
+                        there I worked with
+                        our development team and knew that was the path for me. Since my departure from GreenCoast I
+                        have made strides to
+                        accomplishing my goals and becoming a Software Engineer. In this time, I have taught myself
+                        HTML, CSS and
+                        JavaScript, as well as, being on track to graduate in 2023 with a BS in Computer Science from
+                        Chapman University in
+                        Orange, CA. I look forward to continuing to pursue my passion in this field and hope to grow
+                        into a seasoned
+                        Software Engineer.
+                    </p>
+                    <p class="about-me-text-3">Since beginning my journey into coding and software engineering, it is
+                        incomprehensible to
+                        put into words what you can do with code. Since brushing the surface, there is nothing
+                        professionally I would rather
+                        be doing than this. It is no secret that software engineering continues to be the future, but it
+                        is mind boggling to
+                        know that with the right knowledge and creativity, you can quite literally change the world all
+                        beginning with
+                        <strong>code</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="projects" id="projects">
+            <h2 class="title-text">Projects</h2>
+            <div class="label-holder">
+                <ul class="label-div">
+                    <!-- maybe put icons with background highlighting -->
+                    <li id="cpp">C++</li>
+                    <li id="javascript">JavaScript</li>
+                    <li id="python">Python</li>
+                    <li id="java">Java</li>
+                    <li id="terminal">Terminal</li>
+                    <li id="academic">Academic</li>
+                </ul>
+            </div>
+            <div class="project-item-container">
+                <!-- Project Item (Wordle) start-->
+                <div class="project-item javascript project-showing">
+                    <h3><a href="/wotd">Wordle</a></h3>
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides wordleProj fade">
+                            <img src="./assets/wordle1.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides wordleProj fade">
+                            <img src="./assets/wordle2.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides wordleProj fade">
+                            <img src="./assets/wordle3.jpg" style="width:100%">
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="wordle.plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="wordle.plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+
+                    <!-- The dots/circles -->
+                    <span class="dot wordleDot" onclick="wordle.currentSlide(1)"></span>
+                    <span class="dot wordleDot" onclick="wordle.currentSlide(2)"></span>
+                    <span class="dot wordleDot" onclick="wordle.currentSlide(3)"></span>
+                    <div class="project-text">
+                        <p>Wordle is a popular online game where you have 6 guesses to guess all the letters of a 5
+                            letter word. One thing I implimented in my clone is a leaderboard and ranking system. The
+                            game is live and playable <a href="/wotd">HERE.</a>
+                        </p>
+                        <div class="repo-container">
+                            <a href="https://github.com/josephcalise/wordle-clone-leaderboard" target="_blank">Wordle
+                                GitHub
+                                Repo</a>
+                        </div>
+                    </div>
+                    <div class="filter-tags">
+                        <ul class="filter-tags">
+                            <li>WebApp</li>
+                            <li>Personal</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Project Item (Wordle) END-->
+                <!-- Project Item (BLACKJACK) start-->
+                <div class="project-item java academic terminal project-showing">
+                    <h3><a href="">BlackJack</a></h3>
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade blackJackProj">
+                            <img src="./assets/blackjack1.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides blackJackProj fade">
+                            <img src="./assets/blackjack2.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides blackJackProj fade">
+                            <img src="./assets/blackjack3.png" style="width:100%">
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="blackJack.plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="blackJack.plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+
+                    <!-- The dots/circles -->
+                    <span class="dot blackJackDot" onclick="blackJack.currentSlide(1)"></span>
+                    <span class="dot blackJackDot" onclick="blackJack.currentSlide(2)"></span>
+                    <span class="dot blackJackDot" onclick="blackJack.currentSlide(3)"></span>
+                    <div class="project-text">
+                        <p>BlackJack, a traditional card game where a player will bet against the dealer. Two cards will
+                            be
+                            dealt to both players and the player can hit or hold. Once all players
+                            hold, the closest to 21 wins.
+                        </p>
+                        <div class="repo-container">
+                            <a href="https://github.com/josephcalise/blackjack" target="_blank">BlackJack
+                                GitHub
+                                Repo</a>
+                        </div>
+                    </div>
+                    <div class="filter-tags">
+                        <ul class="filter-tags">
+                            <li>Academic</li>
+                            <li>Java</li>
+                            <li>Terminal</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Project Item (BLACKJACK) END-->
+                <!-- Project Item (MARIO) start-->
+                <div class="project-item cpp academic terminal project-showing">
+                    <h3><a href="">Mario Simulator</a></h3>
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade marioProj">
+                            <img src="./assets/mario1.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides marioProj fade">
+                            <img src="./assets/mario2.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides marioProj fade">
+                            <img src="./assets/mario3.png" style="width:100%">
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="mario.plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="mario.plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+
+                    <!-- The dots/circles -->
+                    <span class="dot marioDot" onclick="mario.currentSlide(1)"></span>
+                    <span class="dot marioDot" onclick="mario.currentSlide(2)"></span>
+                    <span class="dot marioDot" onclick="mario.currentSlide(3)"></span>
+                    <div class="project-text">
+                        <p>The world that consists of a fixed number of levels.
+                            Mario must navigate the levels, encountering enemies and power ups, and collecting coins,
+                            before engaging a boss to move onto the next level.
+                        </p>
+                        <div class="repo-container">
+                            <a href="https://github.com/josephcalise/mario-simulator" target="_blank">Mario
+                                Simulation
+                                GitHub
+                                Repo</a>
+                        </div>
+                    </div>
+                    <div class="filter-tags">
+                        <ul class="filter-tags">
+                            <li>Academic</li>
+                            <li>C++</li>
+                            <li>Terminal</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Project Item (MARIO) END-->
+                <!-- Project Item (Graph) start-->
+                <div class="project-item cpp academic terminal project-showing">
+                    <h3><a href="">Graph MST</a></h3>
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides graphProj fade">
+                            <img src="./assets/graph1.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides graphProj fade">
+                            <img src="./assets/graph2.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides graphProj fade">
+                            <img src="./assets/graph3.png" style="width:100%">
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="graph.plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="graph.plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+
+                    <!-- The dots/circles -->
+                    <span class="dot graphDot" onclick="graph.currentSlide(1)"></span>
+                    <span class="dot graphDot" onclick="graph.currentSlide(2)"></span>
+                    <span class="dot graphDot" onclick="graph.currentSlide(3)"></span>
+                    <div class="project-text">
+                        <p>A program that is capable of identifying a minimum spanning tree of an undirected, weighted
+                            graph using Kruskal’s algorithm. Returns an adjacency matrix and the MST of the provided
+                            graph.
+                        </p>
+                        <div class="repo-container">
+                            <a href="https://github.com/josephcalise/wordle-clone-leaderboard" target="_blank">Mario
+                                Simulation
+                                GitHub
+                                Repo</a>
+                        </div>
+                    </div>
+                    <div class="filter-tags">
+                        <ul class="filter-tags">
+                            <li>Academic</li>
+                            <li>C++</li>
+                            <li>Terminal</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Project Item (Graph) END-->
+
+            </div>
+        </div>
+
+        <div class="work-experience" id="work-experience">
+            <h2 class="title-text">Work Experience</h2>
+            <!-- Button Toggle -->
+            <div class="btn-container">
+                <button id="toggle-btn" onclick="toggleFun()">Interactive Map</button>
+            </div>
+
+            <div class="content-container">
+                <div id='map' class="map-hidden">
+                    <script>
+                        if (screen && screen.width > 480) {
+                            document.write('<script src="map.js"><\/script>');
+                        }
+                    </script>
+                </div>
+                <div id="xp-txt" class="xp-showing">
+                    <div class="button-container">
+                        <button id="coast-guard-button" class="job-selector glowing">United States Coast Guard</button>
+                        <button id="green-coast-button" class="job-selector">GreenCoast Hydroponics</button>
+                        <button id="disney-button" class="job-selector">The Walt Disney Company</button>
+                    </div>
+                    <div class="text-container">
+                        <h3 id="job">United States Coast Guard</h3>
+                        <h4 id="title">Boatswain’s Mate 2nd Class (E-5)</h4>
+                        <h4 id="date">April 2016 - April 2020</h4>
+                        <hr id="hr-line">
+                        <div class="job-description-container">
+                            <div class="job-description-text">
+                                <h5 class="positions" id="position-1">Coxswain</h5>
+                                <p id="paragraph-1">In the United States Coast Guard, the coxswain is the person in
+                                    charge of a small boat and its crew. The coxswain has the authority to direct all
+                                    boat and crew activities during the mission and can modify planned missions to
+                                    provide for the safety of the boat and the crew. At station Chatham, I earned the
+                                    privilege of being a certified coxswain on the multiple boat types which were valued
+                                    up to a million dollars. <strong>I accumulated more than 200 underway hours as a
+                                        coxswain and completed a multitude of missions including, training unit
+                                        personnel underway, assisting distressed boaters, and medical emergencies.
+                                    </strong></p>
+                                <h5 class="positions" id="position-2">Boarding Officer</h5>
+                                <p id="paragraph-2">Coast Guard Boarding Officers are responsible for leading, directing
+                                    and training Maritime Law Enforcement Teams. To become a Boarding Officer, you must
+                                    complete 6 weeks of law enforcement training at the Federal Law Enforcement Training
+                                    Center (FLETC) in Charleston, South Carolina. During this training you are exposed
+                                    to the authority and jurisdictions of Coast Guard law enforcement, local and
+                                    international maritime laws and statutes, as well as critical stress management and
+                                    decision making in deadly force situations. <strong>As a Boarding Officer I lead law
+                                        enforcement teams in over 50 recreational boating safety boardings and more than
+                                        35 Maritime Security and Response Operations.</strong></p>
+                                <h5 class="positions" id="position-3">Officer of the Day</h5>
+                                <p id="paragraph-3">The Officer of the Day (OOD) is responsible for supervising,
+                                    planning, and executing the daily activities at the unit. The OOD must have critical
+                                    thinking and extensive knowledge of each mission the unit preforms. During the duty
+                                    period, which ranges from 48 to 72 hours, the OOD must maintain the unit’s readiness
+                                    to respond to a multitude of missions during <strong>all</strong> hours of that duty
+                                    period. The OOD must also have fluid and effective planning to balance training
+                                    personnel and maintaining unit readiness for missions. This includes maintaining
+                                    proper boat crews and law enforcement teams that are ready to undertake and complete
+                                    any mission that may come up. <strong>As the Officer of the Day, I planned and
+                                        executed upwards of 50 law enforcement events, 7 search and rescue cases, and
+                                        the training and certification of 10 junior personnel in a collection of
+                                        qualifications. </strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="connect" id="contact">
+            <h2 class="title-text">Lets Connect!</h2>
+            <div id="social-media">
+                <a href="https://www.instagram.com/joeycalise/" target="_blank"><img alt="svgImg" id="insta-img"
+                        src="./assets/icons8-instagram-96-white.png" /></a>
+                <a href="https://www.linkedin.com/in/joseph-calise-641662189/" target="_blank"><img id="linkedin-img"
+                        src="./assets/icons8-linkedin-96-white.png" /></a>
+                <a href="https://github.com/josephcalise" target="_blank"><img id="github-img"
+                        src="./assets/icons8-github-96-white.png" /></a>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <p>This site was designed and built by ©Joseph Calise</p>
+    </footer>
+
+
+
+    <div id="icon-div">
+        <div id="to-top" class="bottom-right-buttons">
+            <img src="./assets/up-arrow.png" />
+        </div>
+        <div id="dark-mode">
+            <img id="dark-mode-icon" class="sun" src="./assets/sun-warm.png" />
+        </div>
+    </div>
+</body>
+
+</html>
