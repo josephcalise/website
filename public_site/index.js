@@ -95,8 +95,8 @@ mario.showSlides(mario.slideIndex);
 
 
 /********** To Poplate further projects */
-const wordle2 = new ProjectSlider("wordleProj2", "wordleDot2")
-wordle2.showSlides(wordle2.slideIndex);
+const SQLite = new ProjectSlider("SQLite", "SQLiteDot")
+SQLite.showSlides(SQLite.slideIndex);
 const wordle3 = new ProjectSlider("wordleProj3", "wordleDot3")
 wordle3.showSlides(wordle3.slideIndex);
 const wordle4 = new ProjectSlider("wordleProj4", "wordleDot4")
@@ -113,6 +113,8 @@ const pythonFilter = document.getElementById("python")
 const javaFilter = document.getElementById("java")
 const terminalFilter = document.getElementById("terminal")
 const academicFilter = document.getElementById("academic")
+const sqlFilter = document.getElementById("sql")
+
 
 /**************************************
  * Clear Filter Function
@@ -130,6 +132,7 @@ function clearFilter() {
   javaFilter.classList.remove("glowing")
   terminalFilter.classList.remove("glowing")
   academicFilter.classList.remove("glowing")
+  sqlFilter.classList.remove("glowing")
 }
 
 /******************************************
@@ -156,6 +159,7 @@ cppFilter.addEventListener("click", () => {
     javaFilter.classList.remove("glowing")
     terminalFilter.classList.remove("glowing")
     academicFilter.classList.remove("glowing")
+    sqlFilter.classList.remove("glowing")
   } else {
     currentlyFiltered = null
     clearFilter()
@@ -187,6 +191,7 @@ javascriptFilter.addEventListener("click", () => {
     javaFilter.classList.remove("glowing")
     terminalFilter.classList.remove("glowing")
     academicFilter.classList.remove("glowing")
+    sqlFilter.classList.remove("glowing")
   } else {
     clearFilter()
   }
@@ -217,6 +222,7 @@ pythonFilter.addEventListener("click", () => {
     javaFilter.classList.remove("glowing")
     terminalFilter.classList.remove("glowing")
     academicFilter.classList.remove("glowing")
+    sqlFilter.classList.remove("glowing")
   } else {
     currentlyFiltered = null
     clearFilter()
@@ -248,6 +254,7 @@ javaFilter.addEventListener("click", () => {
     javaFilter.classList.add("glowing")
     terminalFilter.classList.remove("glowing")
     academicFilter.classList.remove("glowing")
+    sqlFilter.classList.remove("glowing")
   } else {
     currentlyFiltered = null
     clearFilter()
@@ -279,6 +286,7 @@ terminalFilter.addEventListener("click", () => {
     javaFilter.classList.remove("glowing")
     terminalFilter.classList.add("glowing")
     academicFilter.classList.remove("glowing")
+    sqlFilter.classList.remove("glowing")
   } else {
     currentlyFiltered = null
     clearFilter()
@@ -308,7 +316,39 @@ academicFilter.addEventListener("click", () => {
     pythonFilter.classList.remove("glowing")
     javaFilter.classList.remove("glowing")
     terminalFilter.classList.remove("glowing")
+    sqlFilter.classList.remove("glowing")
     academicFilter.classList.add("glowing")
+  } else {
+    currentlyFiltered = null
+    clearFilter()
+  }
+})
+
+/******************************************
+ * SQL Filter
+ *****************************************/
+
+sqlFilter.addEventListener("click", () => {
+  if (currentlyFiltered != 'sql') {
+    currentlyFiltered = 'sql'
+    const allProjects = document.querySelectorAll(".project-item")
+    for (const project of allProjects) {
+      if (project.classList.contains("project-hidden")) {
+        project.classList.replace("project-hidden", "project-showing")
+      }
+      if (project.classList.contains("sql")) {
+        continue
+      } else {
+        project.classList.replace("project-showing", "project-hidden")
+      }
+    }
+    cppFilter.classList.remove("glowing")
+    javascriptFilter.classList.remove("glowing")
+    pythonFilter.classList.remove("glowing")
+    javaFilter.classList.remove("glowing")
+    terminalFilter.classList.remove("glowing")
+    academicFilter.classList.remove("glowing")
+    sqlFilter.classList.add("glowing")
   } else {
     currentlyFiltered = null
     clearFilter()
@@ -376,9 +416,20 @@ const githubImage = document.getElementById("github-img")
 const cgButton = document.getElementById("coast-guard-button")
 const gcButton = document.getElementById("green-coast-button")
 const disneyButton = document.getElementById("disney-button")
+const cppButton = document.getElementById("cpp")
+const javascriptButton = document.getElementById("javascript")
+const pythonButton = document.getElementById("python")
+const javaButton = document.getElementById("java")
+const sqlButton = document.getElementById("sql")
+const terminalButton = document.getElementById("terminal")
+const academicButton = document.getElementById("academic")
+
+
 const mobileDarkModeButton = document.getElementById("mobile-dark-mode-icon")
 const mobileDarkModeIcon = document.getElementById("mobile-dark-mode-icon")
-const jobsButtonArr = [cgButton, gcButton, disneyButton]
+const projectItems = document.getElementsByClassName("project-item")
+
+const jobsButtonArr = [cgButton, gcButton, disneyButton, cppButton, javascriptButton, javaButton, sqlButton, terminalButton, academicButton, pythonButton]
 
 
 function changeIcon() {
@@ -399,6 +450,9 @@ function changeIcon() {
     }
     for (var i = 0; i < jobsButtonArr.length; i++) {
       jobsButtonArr[i].style.color = "var(--clr-main-inversed)"
+    }
+    for (var i = 0; i < projectItems.length; i++) {
+      projectItems[i].style.border = "var(--bg-color) 2px solid"
     }
     //Job Experience force color change
     //Lazy way to my transition issue.
@@ -432,6 +486,9 @@ function changeIcon() {
     }
     for (var i = 0; i < jobsButtonArr.length; i++) {
       jobsButtonArr[i].style.color = "var(--clr-main)"
+    }
+    for (var i = 0; i < projectItems.length; i++) {
+      projectItems[i].style.border = "var(--bg-color-inversed) 2px solid"
     }
     //Job Experience force color change
     //Lazy way to my transition issue.

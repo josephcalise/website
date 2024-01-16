@@ -255,7 +255,6 @@ nav ul {
   flex-direction: column;
   min-height: 10vh;
   padding-bottom: 5rem;
-  background-color: #001d3b;
 }
 
 
@@ -280,6 +279,7 @@ nav ul {
   border: solid 2px var(--clr-accent);
   padding: .5rem 1.2rem .5rem 1.2rem;
   height: 100%;
+  background-color: var(--bg-color);
 }
 
 .label-div li:hover {
@@ -295,7 +295,7 @@ nav ul {
   padding: 1rem 0 0 0;
   width: 90%;
   height: 100%;
-  background-color: cadetblue;
+
 }
 
 
@@ -308,8 +308,9 @@ nav ul {
   height: 40rem;
   border-radius: 18px;
   flex: 0 0 33.3333%;
-  background-color: rgb(247, 130, 130);
   text-align: center;
+  background-color: var(--clr-accent);
+  border: var(--bg-color-inversed) 2px solid;
 }
 
 .project-item h3{
@@ -364,7 +365,7 @@ nav ul {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: var(--clr-accent);
+  background-color: var(--bg-color);
   opacity: .6;
 }
 
@@ -374,14 +375,14 @@ nav ul {
   height: 10px;
   width: 10px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: var(--bg-color-inversed);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: var(--clr-accent);
+  background-color: var(--bg-color);
 }
 
 /* Fading animation */
@@ -434,7 +435,8 @@ nav ul {
 
 .filter-tags li {
   font-size: 1rem;
-  background-color: var(--clr-accent);
+  color: var(--clr-main);
+  background-color: var(--bg-color);
   padding: .5rem 1.2rem .5rem 1.2rem;
   height: 1.2rem;
   border-radius: 18px;
