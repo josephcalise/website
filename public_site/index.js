@@ -97,10 +97,129 @@ mario.showSlides(mario.slideIndex);
 /********** To Poplate further projects */
 const SQLite = new ProjectSlider("SQLite", "SQLiteDot")
 SQLite.showSlides(SQLite.slideIndex);
-const wordle3 = new ProjectSlider("wordleProj3", "wordleDot3")
-wordle3.showSlides(wordle3.slideIndex);
-const wordle4 = new ProjectSlider("wordleProj4", "wordleDot4")
-wordle4.showSlides(wordle4.slideIndex);
+const mySQL = new ProjectSlider("mySQLProj", "mySQLDot")
+mySQL.showSlides(mySQL.slideIndex);
+const nfadfa = new ProjectSlider("nfadfaProj", "nfadfaDot")
+nfadfa.showSlides(nfadfa.slideIndex);
+
+/*** ADD Event listeners to pictures. */
+let projects = [wordle, blackJack, graph, mario, SQLite, mySQL, nfadfa]
+if (document.documentElement.clientWidth > 320 && document.documentElement.clientWidth < 769) {
+  let wordleImages = document.getElementsByClassName("wordleProj")
+  for (let image of wordleImages) {
+    let touchstartX = 0
+    let touchendX = 0
+
+    function checkDirection() {
+      if (touchendX < touchstartX) wordle.plusSlides(-1)
+      if (touchendX > touchstartX) wordle.plusSlides(1)
+    }
+
+    image.addEventListener('touchstart', e => {
+      touchstartX = e.changedTouches[0].screenX
+    })
+
+    image.addEventListener('touchend', e => {
+      touchendX = e.changedTouches[0].screenX
+      checkDirection()
+    })
+  }
+  let blackJackImages = document.getElementsByClassName("blackJackProj")
+  for (let image of blackJackImages) {
+    let touchstartX = 0
+    let touchendX = 0
+
+    function checkDirection() {
+      if (touchendX < touchstartX) blackJack.plusSlides(-1)
+      if (touchendX > touchstartX) blackJack.plusSlides(1)
+    }
+
+    image.addEventListener('touchstart', e => {
+      touchstartX = e.changedTouches[0].screenX
+    })
+
+    image.addEventListener('touchend', e => {
+      touchendX = e.changedTouches[0].screenX
+      checkDirection()
+    })
+  }
+  let marioImages = document.getElementsByClassName("marioProj")
+  for (let image of marioImages) {
+    let touchstartX = 0
+    let touchendX = 0
+
+    function checkDirection() {
+      if (touchendX < touchstartX) mario.plusSlides(-1)
+      if (touchendX > touchstartX) mario.plusSlides(1)
+    }
+
+    image.addEventListener('touchstart', e => {
+      touchstartX = e.changedTouches[0].screenX
+    })
+
+    image.addEventListener('touchend', e => {
+      touchendX = e.changedTouches[0].screenX
+      checkDirection()
+    })
+  }
+  let graphImages = document.getElementsByClassName("graphProj")
+  for (let image of graphImages) {
+    let touchstartX = 0
+    let touchendX = 0
+
+    function checkDirection() {
+      if (touchendX < touchstartX) graph.plusSlides(-1)
+      if (touchendX > touchstartX) graph.plusSlides(1)
+    }
+
+    image.addEventListener('touchstart', e => {
+      touchstartX = e.changedTouches[0].screenX
+    })
+
+    image.addEventListener('touchend', e => {
+      touchendX = e.changedTouches[0].screenX
+      checkDirection()
+    })
+  }
+  let sqliteImages = document.getElementsByClassName("SQLite")
+  for (let image of sqliteImages) {
+    let touchstartX = 0
+    let touchendX = 0
+
+    function checkDirection() {
+      if (touchendX < touchstartX) SQLite.plusSlides(-1)
+      if (touchendX > touchstartX) SQLite.plusSlides(1)
+    }
+
+    image.addEventListener('touchstart', e => {
+      touchstartX = e.changedTouches[0].screenX
+    })
+
+    image.addEventListener('touchend', e => {
+      touchendX = e.changedTouches[0].screenX
+      checkDirection()
+    })
+  }
+  let mySQLImages = document.getElementsByClassName("mySQL")
+  for (let image of mySQLImages) {
+    let touchstartX = 0
+    let touchendX = 0
+
+    function checkDirection() {
+      if (touchendX < touchstartX) mySQL.plusSlides(-1)
+      if (touchendX > touchstartX) mySQL.plusSlides(1)
+    }
+
+    image.addEventListener('touchstart', e => {
+      touchstartX = e.changedTouches[0].screenX
+    })
+
+    image.addEventListener('touchend', e => {
+      touchendX = e.changedTouches[0].screenX
+      checkDirection()
+    })
+  }
+}
 
 /******************************************
  * Project Filtering
@@ -428,6 +547,7 @@ const academicButton = document.getElementById("academic")
 const mobileDarkModeButton = document.getElementById("mobile-dark-mode-icon")
 const mobileDarkModeIcon = document.getElementById("mobile-dark-mode-icon")
 const projectItems = document.getElementsByClassName("project-item")
+const filterTags = document.getElementsByClassName("filter-tags-li")
 
 const jobsButtonArr = [cgButton, gcButton, disneyButton, cppButton, javascriptButton, javaButton, sqlButton, terminalButton, academicButton, pythonButton]
 
@@ -453,6 +573,10 @@ function changeIcon() {
     }
     for (var i = 0; i < projectItems.length; i++) {
       projectItems[i].style.border = "var(--bg-color) 2px solid"
+    }
+    for (var i = 0; i < filterTags.length; i++) {
+      filterTags[i].style.color = "var(--bg-color)"
+      filterTags[i].style.backgroundColor = "var(--bg-color-inversed)"
     }
     //Job Experience force color change
     //Lazy way to my transition issue.
@@ -489,6 +613,10 @@ function changeIcon() {
     }
     for (var i = 0; i < projectItems.length; i++) {
       projectItems[i].style.border = "var(--bg-color-inversed) 2px solid"
+    }
+    for (var i = 0; i < filterTags.length; i++) {
+      filterTags[i].style.color = "var(--bg-color-inversed)"
+      filterTags[i].style.backgroundColor = "var(--bg-color)"
     }
     //Job Experience force color change
     //Lazy way to my transition issue.
