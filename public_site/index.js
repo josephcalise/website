@@ -219,6 +219,25 @@ if (document.documentElement.clientWidth > 320 && document.documentElement.clien
       checkDirection()
     })
   }
+  let nfadfaProj = document.getElementsByClassName("nfadfaProj")
+  for (let image of nfadfaProj) {
+    let touchstartX = 0
+    let touchendX = 0
+
+    function checkDirection() {
+      if (touchendX < touchstartX) nfadfa.plusSlides(-1)
+      if (touchendX > touchstartX) nfadfa.plusSlides(1)
+    }
+
+    image.addEventListener('touchstart', e => {
+      touchstartX = e.changedTouches[0].screenX
+    })
+
+    image.addEventListener('touchend', e => {
+      touchendX = e.changedTouches[0].screenX
+      checkDirection()
+    })
+  }
 }
 
 /******************************************
