@@ -670,6 +670,16 @@ mobileDarkModeButton.addEventListener("click", changeIcon)
 
 const jobs = [
   {
+    job: "USAA",
+    title: "Software Engineer Intern",
+    date: "May 2024 - August 2024",
+    positions: ["Software Engineer", "Managed Projects"],
+    positionInfo: ["As a Software Engineer within Digital Experience and Enablement, I worked on the Member Home team, which manages the member home page for web and a suite of APIs responsible for delivering member data to that page. These APIs handle over <strong>500 million requests a day</strong>, aggregating and transforming data received from all lines of business to enhance the member home experience. Over the course of the internship, I quickly integrated with the team and actively contributed to the AGILE environment by picking up and completing stories within my first week.",
+      "<strong>Multi-Product Search Feature</strong>: Addition of a multi-product search feature for internal troubleshooting of test members and different product types. The need for this feature came when a bug was introducted for members with specific product combinations. <strong>This project included extensive front-end and back-end development efforts.</strong> On the back-end, it involved creating the <strong>capability for the server to dynamically construct and execute variable-length database queries</strong> to handle diverse product combinations efficiently. Additionally, it required enhancements to the front-end to ensure that various results sets could be accurately displayed and interacted with. These improvements collectively enabled a more robust and flexible tool for internal troubleshooting and testing of different product configurations.\
+      <br><br><strong>Query Optimization</strong>: After implementing the multi-product search feature, query times became an issue. Initially, single-product queries took 5-6 seconds, while multi-product queries ranged from 10-15 seconds, depending on the number of products. To address this, I analyzed the root cause, reviewed database documentation, and collaborated with the database team to develop an index. <strong>This optimization led to an impressive 85% reduction in query times, decreasing single-product searches to under 1 second and multi-product searches to 1-1.5 seconds.</strong> \
+      <br><br><strong>React Redesign</strong>: With 3 weeks left in the internship, I began working on redesigning the internal application in ReactJS, <strong>a framework I had never worked with prior to this experience</strong>. This project involved a complete redesign of the homepage and minor updates to the features across the remaining 5 tabs. The redesign focused on enhancing user experience and improving overall application performance. I collaborated closely with team members to ensure the new design met both functional and aesthetic requirements, and leveraged ReactJS features to implement a more dynamic and responsive interface."]
+  },
+  {
     job: "United States Coast Guard",
     title: "Boatswain’s Mate 2nd Class (E-5)",
     date: "April 2016 - April 2020",
@@ -679,15 +689,6 @@ const jobs = [
       "Coast Guard Boarding Officers are responsible for leading, directing and training Maritime Law Enforcement Teams. To become a Boarding Officer, you must complete 6 weeks of law enforcement training at the Federal Law Enforcement Training Center (FLETC) in Charleston, South Carolina. During this training you are exposed to the authority and jurisdictions of Coast Guard law enforcement, local and international maritime laws and statutes, as well as critical stress management and decision making in deadly force situations. <strong>As a Boarding Officer I was involved with over 50 recreational boating safety boardings and more than 35 Maritime Security and Response Operations.</strong>",
       "The Officer of the Day (OOD) is responsible for supervising, planning, and executing the daily activities at the unit. The OOD must have critical thinking and extensive knowledge of each mission the unit preforms. During the duty period, which ranges from 48 to 72 hours, the OOD must maintain the unit’s readiness to respond to a multitude of missions during <strong>all</strong> hours of that duty period. The OOD must also have fluid and effective planning to balance training personnel and maintaining unit readiness for missions. This includes maintaining proper boat crews and law enforcement teams that are ready to undertake and complete any mission that may come up. <strong>As the Officer of the Day, I planned and executed upwards of 50 law enforcement events, 7 search and rescue cases, and the training and certification of 10 junior personnel in a collection of qualifications. </strong>"]
 
-  },
-  {
-    job: "USAA",
-    title: "Software Engineer Intern",
-    date: "May 2024 - August 2024",
-    positions: ["Digital Experience and Enablement", "Full-Stack Feature Building", "Automation Testing"],
-    positionInfo: ["Worked on the Digital Experience team responsible for a suite of business-critical APIs handling up to <strong>500 million requests daily</strong>, along with internal business applications supporting customer service representatives and monitoring API workflow statuses, speeds, and availability.",
-      "Quickly integrated with the team, leveraging my full-stack development skills and AGILE principles to develop a feature for troubleshooting account interaction issues. This feature included implementing a UI population changes, creating new server endpoints, and implementing server-side query generation to handle variable query parameters. Once the feature was completed, I worked on <strong>query optimization bringing query times down by 35%.</strong>",
-      "Enhanced the scope of automated integration tests utilizing Newman and Postman collections within the CI/CD pipeline. Ensured cascading API calls functioned properly for over <strong>40 products across 4 lines of businesses</strong>. These tests involved selecting random members for each product to verify API calls and data retrieval processes worked as intended."]
   },
   {
     job: "GreenCoast Hydroponics",
@@ -706,26 +707,6 @@ const jobs = [
 
 function showCoastGuard() {
   //top information on job
-  document.getElementById("job").innerHTML = jobs[0].job
-  document.getElementById("title").innerHTML = jobs[0].title
-  document.getElementById("date").innerHTML = jobs[0].date
-  //titles
-  document.getElementById("position-1").innerHTML = jobs[0].positions[0]
-  document.getElementById("position-2").innerHTML = jobs[0].positions[1]
-  document.getElementById("position-3").innerHTML = jobs[0].positions[2]
-  //descriptions
-  document.getElementById("paragraph-1").innerHTML = jobs[0].positionInfo[0]
-  document.getElementById("paragraph-2").innerHTML = jobs[0].positionInfo[1]
-  document.getElementById("paragraph-3").innerHTML = jobs[0].positionInfo[2]
-  //selector afterglow
-  document.getElementById("coast-guard-button").classList.add("glowing")
-  document.getElementById("green-coast-button").classList.remove("glowing")
-  document.getElementById("USAA-button").classList.remove("glowing")
-
-}
-
-function showUSAA() {
-  //top information on job
   document.getElementById("job").innerHTML = jobs[1].job
   document.getElementById("title").innerHTML = jobs[1].title
   document.getElementById("date").innerHTML = jobs[1].date
@@ -737,6 +718,26 @@ function showUSAA() {
   document.getElementById("paragraph-1").innerHTML = jobs[1].positionInfo[0]
   document.getElementById("paragraph-2").innerHTML = jobs[1].positionInfo[1]
   document.getElementById("paragraph-3").innerHTML = jobs[1].positionInfo[2]
+  //selector afterglow
+  document.getElementById("coast-guard-button").classList.add("glowing")
+  document.getElementById("green-coast-button").classList.remove("glowing")
+  document.getElementById("USAA-button").classList.remove("glowing")
+
+}
+
+function showUSAA() {
+  //top information on job
+  document.getElementById("job").innerHTML = jobs[0].job
+  document.getElementById("title").innerHTML = jobs[0].title
+  document.getElementById("date").innerHTML = jobs[0].date
+  //titles
+  document.getElementById("position-1").innerHTML = jobs[0].positions[0]
+  document.getElementById("position-2").innerHTML = jobs[0].positions[1]
+  document.getElementById("position-3").innerHTML = ''
+  //descriptions
+  document.getElementById("paragraph-1").innerHTML = jobs[0].positionInfo[0]
+  document.getElementById("paragraph-2").innerHTML = jobs[0].positionInfo[1]
+  document.getElementById("paragraph-3").innerHTML = ''
   //afterglow
   document.getElementById("USAA-button").classList.add("glowing")
   document.getElementById("green-coast-button").classList.remove("glowing")
