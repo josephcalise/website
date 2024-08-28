@@ -1,7 +1,3 @@
-export { possibleWords, allWords };
-
-
-
 let allWords = [
     'aargh',
     'abaca',
@@ -8106,3 +8102,5 @@ let possibleWords = [
     'zesty',
     'zonal',
 ]
+
+module.exports = {allWords}

@@ -111,8 +111,8 @@ if (document.documentElement.clientWidth > 320 && document.documentElement.clien
     let touchendX = 0
 
     function checkDirection() {
-      if (touchendX < touchstartX) wordle.plusSlides(-1)
-      if (touchendX > touchstartX) wordle.plusSlides(1)
+      if (touchendX < touchstartX) wordle.plusSlides(1)
+      if (touchendX > touchstartX) wordle.plusSlides(-1)
     }
 
     image.addEventListener('touchstart', e => {
@@ -130,8 +130,8 @@ if (document.documentElement.clientWidth > 320 && document.documentElement.clien
     let touchendX = 0
 
     function checkDirection() {
-      if (touchendX < touchstartX) blackJack.plusSlides(-1)
-      if (touchendX > touchstartX) blackJack.plusSlides(1)
+      if (touchendX < touchstartX) blackJack.plusSlides(1)
+      if (touchendX > touchstartX) blackJack.plusSlides(-1)
     }
 
     image.addEventListener('touchstart', e => {
@@ -149,8 +149,8 @@ if (document.documentElement.clientWidth > 320 && document.documentElement.clien
     let touchendX = 0
 
     function checkDirection() {
-      if (touchendX < touchstartX) mario.plusSlides(-1)
-      if (touchendX > touchstartX) mario.plusSlides(1)
+      if (touchendX < touchstartX) mario.plusSlides(1)
+      if (touchendX > touchstartX) mario.plusSlides(-1)
     }
 
     image.addEventListener('touchstart', e => {
@@ -168,8 +168,8 @@ if (document.documentElement.clientWidth > 320 && document.documentElement.clien
     let touchendX = 0
 
     function checkDirection() {
-      if (touchendX < touchstartX) graph.plusSlides(-1)
-      if (touchendX > touchstartX) graph.plusSlides(1)
+      if (touchendX < touchstartX) graph.plusSlides(1)
+      if (touchendX > touchstartX) graph.plusSlides(-1)
     }
 
     image.addEventListener('touchstart', e => {
@@ -187,8 +187,8 @@ if (document.documentElement.clientWidth > 320 && document.documentElement.clien
     let touchendX = 0
 
     function checkDirection() {
-      if (touchendX < touchstartX) SQLite.plusSlides(-1)
-      if (touchendX > touchstartX) SQLite.plusSlides(1)
+      if (touchendX < touchstartX) SQLite.plusSlides(1)
+      if (touchendX > touchstartX) SQLite.plusSlides(-1)
     }
 
     image.addEventListener('touchstart', e => {
@@ -206,8 +206,8 @@ if (document.documentElement.clientWidth > 320 && document.documentElement.clien
     let touchendX = 0
 
     function checkDirection() {
-      if (touchendX < touchstartX) mySQL.plusSlides(-1)
-      if (touchendX > touchstartX) mySQL.plusSlides(1)
+      if (touchendX < touchstartX) mySQL.plusSlides(1)
+      if (touchendX > touchstartX) mySQL.plusSlides(-1)
     }
 
     image.addEventListener('touchstart', e => {
@@ -225,8 +225,8 @@ if (document.documentElement.clientWidth > 320 && document.documentElement.clien
     let touchendX = 0
 
     function checkDirection() {
-      if (touchendX < touchstartX) nfadfa.plusSlides(-1)
-      if (touchendX > touchstartX) nfadfa.plusSlides(1)
+      if (touchendX < touchstartX) nfadfa.plusSlides(1)
+      if (touchendX > touchstartX) nfadfa.plusSlides(-1)
     }
 
     image.addEventListener('touchstart', e => {
@@ -553,7 +553,7 @@ const linkedinImage = document.getElementById("linkedin-img")
 const githubImage = document.getElementById("github-img")
 const cgButton = document.getElementById("coast-guard-button")
 const gcButton = document.getElementById("green-coast-button")
-const disneyButton = document.getElementById("disney-button")
+const USAAButton = document.getElementById("USAA-button")
 const cppButton = document.getElementById("cpp")
 const javascriptButton = document.getElementById("javascript")
 const pythonButton = document.getElementById("python")
@@ -568,7 +568,7 @@ const mobileDarkModeIcon = document.getElementById("mobile-dark-mode-icon")
 const projectItems = document.getElementsByClassName("project-item")
 const filterTags = document.getElementsByClassName("filter-tags-li")
 
-const jobsButtonArr = [cgButton, gcButton, disneyButton, cppButton, javascriptButton, javaButton, sqlButton, terminalButton, academicButton, pythonButton]
+const jobsButtonArr = [cgButton, gcButton, USAAButton, cppButton, javascriptButton, javaButton, sqlButton, terminalButton, academicButton, pythonButton]
 
 
 function changeIcon() {
@@ -670,6 +670,16 @@ mobileDarkModeButton.addEventListener("click", changeIcon)
 
 const jobs = [
   {
+    job: "USAA",
+    title: "Software Engineer Intern",
+    date: "May 2024 - August 2024",
+    positions: ["Software Engineer", "Managed Projects"],
+    positionInfo: ["As a Software Engineer within Digital Experience and Enablement, I worked on the Member Home team, which manages the member home page for web and a suite of APIs responsible for delivering member data to that page. These APIs handle over <strong>500 million requests a day</strong>, aggregating and transforming data received from all lines of business to enhance the member home experience. Over the course of the internship, I quickly integrated with the team and actively contributed to the AGILE environment by picking up and completing stories within my first week.",
+      "<strong>Multi-Product Search Feature</strong>: Addition of a multi-product search feature for internal troubleshooting of test members and different product types. The need for this feature came when a bug was introducted for members with specific product combinations. <strong>This project included extensive front-end and back-end development efforts.</strong> On the back-end, it involved creating the <strong>capability for the server to dynamically construct and execute variable-length database queries</strong> to handle diverse product combinations efficiently. Additionally, it required enhancements to the front-end to ensure that various results sets could be accurately displayed and interacted with. These improvements collectively enabled a more robust and flexible tool for internal troubleshooting and testing of different product configurations.\
+      <br><br><strong>Query Optimization</strong>: After implementing the multi-product search feature, query times became an issue. Initially, single-product queries took 5-6 seconds, while multi-product queries ranged from 10-15 seconds, depending on the number of products. To address this, I analyzed the root cause, reviewed database documentation, and collaborated with the database team to develop an index. <strong>This optimization led to an impressive 85% reduction in query times, decreasing single-product searches to under 1 second and multi-product searches to 1-1.5 seconds.</strong> \
+      <br><br><strong>React Redesign</strong>: With 3 weeks left in the internship, I began working on redesigning the internal application in ReactJS, <strong>a framework I had never worked with prior to this experience</strong>. This project involved a complete redesign of the homepage and minor updates to the features across the remaining 5 tabs. The redesign focused on enhancing user experience and improving overall application performance. I collaborated closely with team members to ensure the new design met both functional and aesthetic requirements, and leveraged ReactJS features to implement a more dynamic and responsive interface."]
+  },
+  {
     job: "United States Coast Guard",
     title: "Boatswain’s Mate 2nd Class (E-5)",
     date: "April 2016 - April 2020",
@@ -688,14 +698,6 @@ const jobs = [
     positionInfo: ["While at GreenCoast Hydroponics, I worked on a 2 person IT team that served 11 store locations, a headquarters and a work from home fleet, combined this summed up to be over 75 workstations and 5 servers. I swiftly became proficient in technologies like NCR Counterpoint, Active Directory, Sonicwall VPNs and Firewalls. <strong>In less than a month I was trusted to solely take control of the helpdesk allowing the Director of Technology to take a hands-off approach to day-to-day support and focus on future deployments and upgrades.</strong>",
       "<strong>Adaptation of the Help Desk</strong>: Before joining the team, there was no help desk or ticketing system since the Director of Technology was the only support for the company. Once I was hired, I was assigned with the company adaptation of a help desk ticketing system. During this time, I created the operating standards for the ticketing system and educated the company on those new standards and use of the ticketing system (ZenDesk). I set up auto forwarding to the Zendesk ticketing system as well as automated replies for solved tickets. This benefited the IT department with an organization tool increasing our response time and rate on tickets. <br><br> <strong>Development + Deployment of new Ad Displays: </strong> With the current ad displays being run by Apple TVs, it was not effective to have the display rendered unusable when a remote was lost. I was tasked to develop and deploy a new process for ad displays. I developed a way for us to display, change and update ads using a Raspberry Pi Zero W. I set each up for SSH access so we could access them from anywhere. This deployment lowered the company’s operating cost from $150 per ad display to $10.<br><br><strong>Deployment of NCR Counterpoint v8.5:</strong> During off hours, over the course of multiple months, we staged upgraded point of sales clients at all locations and stores. On deployment day, I was personally responsible to ensure all personnel were educated on and using the new NCR Client."]
 
-  },
-  {
-    job: "The Walt Disney Company",
-    title: "Lifeguard + Lifeguard Trainer",
-    date: "April 2014 - February 2016",
-    positions: ["Lifeguard", "Lifeguard Trainer"],
-    positionInfo: ["As a lifeguard at The Walt Disney Company, we had different assignments each day at any of the 3 Disney Hotels on the property, each of these hotels had multiple pools and slide features. While on duty we were responsible for all guests within the pool gate. To maintain our lifeguard qualification, we had regular audits to maintain our skills in CPR, first aid and emergency plans and execution for medical emergencies. Audits could be at any time and range from simple first aid questions and role play, to live simulated medical emergencies in and out of the water.",
-      "Half-way through my time at The Walt Disney Company I had the opportunity to apply, interview and accept the position of Lifeguard Trainer. As a trainer you were responsible to train the newly hired lifeguards in the day-to-day operation and proper etiquette while being on stand. With the importance of the lifeguard’s role, being a trainer was a position that was taken very seriously to make sure there is no safety hazards whether it was a seasoned lifeguard was on stand or a new lifeguard. While training you were expected to be a hands-on trainer with the new lifeguards. Over the course of a full week of training you are expected to teach the new lifeguards, positions and rotations, etiquette on the stand and proper responses to an abundance of situations that could arise on the pool deck. "]
   }
 ]
 
@@ -705,43 +707,43 @@ const jobs = [
 
 function showCoastGuard() {
   //top information on job
-  document.getElementById("job").innerHTML = jobs[0].job
-  document.getElementById("title").innerHTML = jobs[0].title
-  document.getElementById("date").innerHTML = jobs[0].date
-  //titles
-  document.getElementById("position-1").innerHTML = jobs[0].positions[0]
-  document.getElementById("position-2").innerHTML = jobs[0].positions[1]
-  document.getElementById("position-3").innerHTML = jobs[0].positions[2]
-  //descriptions
-  document.getElementById("paragraph-1").innerHTML = jobs[0].positionInfo[0]
-  document.getElementById("paragraph-2").innerHTML = jobs[0].positionInfo[1]
-  document.getElementById("paragraph-3").innerHTML = jobs[0].positionInfo[2]
-  //selector afterglow
-  document.getElementById("coast-guard-button").classList.add("glowing")
-  document.getElementById("green-coast-button").classList.remove("glowing")
-  document.getElementById("disney-button").classList.remove("glowing")
-
-}
-
-function showGreenCoast() {
-  //top information on job
   document.getElementById("job").innerHTML = jobs[1].job
   document.getElementById("title").innerHTML = jobs[1].title
   document.getElementById("date").innerHTML = jobs[1].date
   //titles
   document.getElementById("position-1").innerHTML = jobs[1].positions[0]
   document.getElementById("position-2").innerHTML = jobs[1].positions[1]
-  document.getElementById("position-3").innerHTML = ""
+  document.getElementById("position-3").innerHTML = jobs[1].positions[2]
   //descriptions
   document.getElementById("paragraph-1").innerHTML = jobs[1].positionInfo[0]
   document.getElementById("paragraph-2").innerHTML = jobs[1].positionInfo[1]
-  document.getElementById("paragraph-3").innerHTML = ""
-  //afterglow
-  document.getElementById("green-coast-button").classList.add("glowing")
-  document.getElementById("coast-guard-button").classList.remove("glowing")
-  document.getElementById("disney-button").classList.remove("glowing")
+  document.getElementById("paragraph-3").innerHTML = jobs[1].positionInfo[2]
+  //selector afterglow
+  document.getElementById("coast-guard-button").classList.add("glowing")
+  document.getElementById("green-coast-button").classList.remove("glowing")
+  document.getElementById("USAA-button").classList.remove("glowing")
+
 }
-function showDisney() {
+
+function showUSAA() {
+  //top information on job
+  document.getElementById("job").innerHTML = jobs[0].job
+  document.getElementById("title").innerHTML = jobs[0].title
+  document.getElementById("date").innerHTML = jobs[0].date
+  //titles
+  document.getElementById("position-1").innerHTML = jobs[0].positions[0]
+  document.getElementById("position-2").innerHTML = jobs[0].positions[1]
+  document.getElementById("position-3").innerHTML = ''
+  //descriptions
+  document.getElementById("paragraph-1").innerHTML = jobs[0].positionInfo[0]
+  document.getElementById("paragraph-2").innerHTML = jobs[0].positionInfo[1]
+  document.getElementById("paragraph-3").innerHTML = ''
+  //afterglow
+  document.getElementById("USAA-button").classList.add("glowing")
+  document.getElementById("green-coast-button").classList.remove("glowing")
+  document.getElementById("coast-guard-button").classList.remove("glowing")
+}
+function showGreenCoast() {
   //top information on job
   document.getElementById("job").innerHTML = jobs[2].job
   document.getElementById("title").innerHTML = jobs[2].title
@@ -755,14 +757,14 @@ function showDisney() {
   document.getElementById("paragraph-2").innerHTML = jobs[2].positionInfo[1]
   document.getElementById("paragraph-3").innerHTML = ""
   //afterglow
-  document.getElementById("disney-button").classList.add("glowing")
-  document.getElementById("green-coast-button").classList.remove("glowing")
+  document.getElementById("green-coast-button").classList.add("glowing")
   document.getElementById("coast-guard-button").classList.remove("glowing")
+  document.getElementById("USAA-button").classList.remove("glowing")
 }
 
 document.getElementById("coast-guard-button").addEventListener("click", showCoastGuard)
 document.getElementById("green-coast-button").addEventListener("click", showGreenCoast)
-document.getElementById("disney-button").addEventListener("click", showDisney)
+document.getElementById("USAA-button").addEventListener("click", showUSAA)
 
 
 /*****************************************************************************************

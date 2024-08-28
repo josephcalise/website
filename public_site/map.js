@@ -113,6 +113,8 @@ for (const feature of geojson.features) {
     )
     .addTo(map);
 }
+
+
 //Green Coast Addition
 const el = document.createElement("div");
 el.className = "GC-marker";
@@ -126,6 +128,26 @@ new mapboxgl.Marker(el)
         `<h3>GreenCoast Hydroponics</h3>
          <h4>August 2020 - Jun 2021</h4>
          <p>While working here, I was part of a two-person team serving <strong>11 store locations, a headquarters and a work from home fleet.</strong> During my time I worked on major projects involving point of sales deployment, building out documentation for new systems and training oncoming personnel. While working on these projects, I was the sole technician working the helpdesk for the company. After we added one more person to our team, I stepped into the training role to bring this person up to speed on the systems. In less than 2 months I was able to train the newly hired personnel to confidently solve tickets submitted to the helpdesk.</p>`
+      )
+  )
+  .addTo(map);
+
+//Green Coast Addition
+const elUSAA = document.createElement("div");
+elUSAA.className = "USAA-marker";
+
+// make a marker for each feature and add to the map
+new mapboxgl.Marker(elUSAA)
+  .setLngLat([-96.817, 33.079])
+  .setPopup(
+    new mapboxgl.Popup({ offset: 25 }) // add popups
+      .setHTML(
+        `<h3>USAA</h3>
+         <h4>Software Engineer Intern</h4>
+         <h4>May 2024 - Aug 2024</h4>
+         <p><span>&#8226;</span> Worked on the Digital Enterprise team responsible for a suite of business-critical APIs handling up to 500 million requests daily, along with internal business applications supporting customer service representatives and monitoring API workflow statuses, speeds, and availability.<br>
+         <span>&#8226;</span> Quickly integrated with the team, leveraging my full-stack development skills and AGILE principles to develop a feature for troubleshooting account interaction issues. This feature included implementing a UI population changes, creating new server endpoints, and implementing server-side query generation to handle variable query parameters. Once the feature was completed, I worked on query optimization bringing query times down by 35%. 
+         </p>`
       )
   )
   .addTo(map);
